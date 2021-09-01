@@ -1,7 +1,284 @@
+:root {
+  --ff-open-sans: "Open Sans", sans-serif;
+  --ff-poppins: "Poppins", sans-serif;
+  /* small screen font-sizes */
+  --fs-200: 0.625rem;
+  --fs-300: 0.75rem;
+  --fs-400: 0.875rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+  --fs-800: 3.813rem;
+  --fw-regular: 400;
+  --fw-bold: 600;
+  --fw-bolder: 700;
+  --clr-neutral-100: hsl(207, 100%, 98%);
+  --clr-neutral-200: hsl(177, 81%, 65%);
+  --clr-neutral-300: hsl(192, 100%, 9%);
+  --clr-primary-100: hsl(321, 100%, 78%);
+  --clr-primary-200: hsl(322, 100%, 66%);
+  --clr-primary-300: hsl(0, 100%, 63%);
+  --clr-bg-100: #f6fbff;
+  --br: 1rem;
+}
+
+/* reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.5;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  line-height: 1.5;
+  font-family: var(--ff-open-sans);
+  font-size: var(--fs-400);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-300);
+  text-align: center;
+}
+
+/* typography */
+h1,
+h2,
+h3,
+.text-poppins {
+  font-family: var(--ff-poppins);
+  font-weight: var(--fw-bolder);
+}
+
+a {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bolder);
+}
+a:hover, a:focus {
+  opacity: 0.7;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  border-radius: 100vw;
+  padding: 0.9em 1.9em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.btn:hover, .btn:focus {
+  opacity: 0.7;
+}
+.btn-primary {
+  color: #fff;
+  background: var(--clr-primary-200);
+}
+.btn-secondary {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: var(--fw-bolder);
+  background: var(--clr-primary-100);
+  border-radius: 5px;
+}
+.btn-transparent {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-regular);
+  padding: 0.3em 1.6em;
+  color: var(--clr-primary-200);
+  border: 1px solid var(--clr-primary-200);
+  background-color: transparent;
+}
+
+/* general layout */
+section {
+  padding: 5rem 0;
+}
+
+@media (min-width: 40em) {
+  section {
+    padding: 3.5rem 0;
+  }
+}
+.container {
+  padding: 0 2em;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.flow-content > * + * {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.split > * {
+  flex-basis: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+    gap: 2.5rem;
+  }
+
+  .flex {
+    flex-direction: row;
+  }
+}
+.xl-space {
+  margin-top: 5rem;
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fw-700 {
+  font-weight: var(--fw-bolder);
+}
+
+.bg-wave {
+  background-color: var(--clr-bg-100);
+}
+
+.txt-uppercase {
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.logo {
+  width: 6rem;
+}
+
+.hero {
+  --flow-spacer: 7em;
+}
+.hero .btn {
+  width: 65%;
+  margin-top: 3rem;
+}
+
+.hero-text {
+  --flow-spacer: 1.5em;
+}
+
+.hero-title,
+.cta-title {
+  font-size: var(--fs-600);
+}
+
+.stats img {
+  width: 2rem;
+}
+
+.communities,
+.messages {
+  --flow-spacer: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: min-content;
+  margin: 0 auto;
+  line-height: 1;
+  font-weight: var(--fw-bold);
+}
+.communities p:not([class]),
+.messages p:not([class]) {
+  opacity: 0.5;
+}
+
+.scale {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bolder);
+}
+
+.features > * {
+  padding: 3rem 0;
+}
+.features .col-img {
+  padding: 0 1rem;
+}
+.features .flex {
+  flex-direction: column-reverse;
+  gap: 5rem;
+}
+
+.cta .btn {
+  width: 65%;
+}
+
+footer {
+  padding: 2rem 0;
+  margin-top: 5rem;
+  text-align: left;
+  background-color: var(--clr-neutral-300);
+  color: white;
+}
+footer .footer-logo {
+  width: 12.5rem;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(83%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
+}
+footer .contact > * {
+  display: flex;
+  gap: 1rem;
+}
+footer .social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+footer .social a {
+  color: white;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
