@@ -23,9 +23,18 @@
   --clr-primary-300: hsl(0, 100%, 63%);
 
   --clr-bg-100: hsl(207, 100%, 98%);
-  // --clr-bg-100: grey;
+  // --clr-bg-100: grey; //temporary
 
-  --br: 1rem;
+  @media (min-width: 40em) {
+    // 0.969  features text size
+    //0.875 footer text
+    //1.469 stats p text
+    --fs-200: 1.063rem; //nav link
+    --fs-400: 1.25rem; //body and links
+    --fs-500: 2.5rem; //cta and feature headings
+    --fs-600: 3rem; //main heading
+    --fs-800: 6rem; //  stats with font weight bold
+  }
 }
 
 /* reset */
@@ -121,14 +130,14 @@ a {
   border: 0;
   background: none;
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: background 0.3s ease;
   border-radius: 100vw;
   padding: 0.9em 1.9em;
-  box-shadow: 0 5px 15px rgba($color: #000000, $alpha: 0.1);
+  box-shadow: 0 10px 10px rgba($color: #000000, $alpha: 0.1);
 
   &:hover,
   &:focus {
-    opacity: 0.7;
+    background: var(--clr-primary-100);
   }
 
   &-primary {
@@ -146,10 +155,15 @@ a {
   &-transparent {
     font-size: var(--fs-200);
     font-weight: var(--fw-regular);
-    padding: 0.3em 1.6em;
+    padding: 0.4em 1.6em;
     color: var(--clr-primary-200);
     border: 1px solid var(--clr-primary-200);
     background-color: transparent;
+    box-shadow: 0 -5px 10px rgba($color: #000000, $alpha: 0.1);
+    &:hover,
+    &:focus {
+      color: white;
+    }
   }
 }
 
@@ -186,7 +200,7 @@ section {
 
 .flex {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 @media (min-width: 40em) {
@@ -196,6 +210,10 @@ section {
   }
   .flex {
     flex-direction: row;
+    align-items: center;
+    & > * {
+      flex-basis: 100%;
+    }
   }
 }
 
