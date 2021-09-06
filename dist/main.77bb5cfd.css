@@ -343,6 +343,10 @@ footer .newsletter-form {
   margin-top: 2.6rem;
   position: relative;
 }
+footer .newsletter-form .label-email {
+  position: absolute;
+  visibility: hidden;
+}
 footer .newsletter-form .btn {
   width: 50%;
 }

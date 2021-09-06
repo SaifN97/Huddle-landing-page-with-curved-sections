@@ -120,6 +120,10 @@ footer {
     align-items: flex-end;
     margin-top: 2.6rem;
     position: relative;
+    .label-email {
+      position: absolute;
+      visibility: hidden;
+    }
     .btn {
       width: 50%;
     }

@@ -58,12 +58,12 @@
         <div class="container split">
           <div class="communities flow-content">
             <img src="images/icon-communities.svg" alt="" />
-            <p class="scale">1.4k+</p>
+            <h3 class="scale">1.4k+</h3>
             <p>Communities Formed</p>
           </div>
           <div class="messages flow-content">
             <img src="images/icon-messages.svg" alt="" />
-            <p class="scale">2.7m+</p>
+            <h3 class="scale">2.7m+</h3>
             <p>Messages Sent</p>
           </div>
         </div>
@@ -195,6 +195,7 @@
             onsubmit="return false"
             class="newsletter-form flow-content flex"
           >
+            <label for="email" class="label-email">Email:</label>
             <input type="email" name="email" id="email" />
             <button class="btn btn-secondary">Subscribe</button>
             <div class="error">Check your email please</div>
@@ -217,9 +218,15 @@
             </div>
           </div>
           <div class="social">
-            <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+            <a aria-label="facebook" href="#"
+              ><i class="fab fa-facebook-square fa-2x"></i
+            ></a>
+            <a aria-label="instagram" href="#"
+              ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+            <a aria-label="twitter" href="#"
+              ><i class="fab fa-twitter-square fa-2x"></i
+            ></a>
           </div>
         </div>
       </div>
